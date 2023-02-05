@@ -22,7 +22,6 @@ class NewsListTableViewController: UITableViewController {
         Task {
             do {
                 let articles = try await WebService().getArticles(url: url)
-
                 
                 self.articleListVM = ArticleListViewModel(articles: articles)
                 
@@ -34,6 +33,27 @@ class NewsListTableViewController: UITableViewController {
                 print(error)
             }
         }
+    }
+}
+
+extension NewsListTableViewController {
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return self.articleListVM == nil ? 0 : self.articleListVM.numberOfSections
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.articleListVM == nil ? 0 : self.articleListVM.numberOfRawsInSection(section)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ArticelCell", for: indexPath) as? ArticleTableViewCell else {
+            fatalError("ArticleTableViewCell not fount")
+        }
+        let articleVM = self.articleListVM.articleAtIndex(indexPath.row)
+        cell.titleLabel.text = articleVM.title
+        cell.descriptionLabel.text = articleVM.description
         
+        return cell
     }
 }
