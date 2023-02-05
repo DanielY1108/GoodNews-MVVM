@@ -19,17 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let _ = (scene as? UIWindowScene) else { return }
         let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
         
-        let naviationBar = UINavigationBar.appearance()
-        naviationBar.standardAppearance = appearance
-        naviationBar.compactAppearance = appearance
-        naviationBar.scrollEdgeAppearance = appearance
+        appearance.configureWithTransparentBackground()
         appearance.backgroundColor = .darkGray
         appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.orange]
         appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.orange]
-
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.orange]        
+        
+        let naviationBarAppearance = UINavigationBar.appearance()
+        naviationBarAppearance.standardAppearance = appearance
+        naviationBarAppearance.compactAppearance = appearance
+        naviationBarAppearance.scrollEdgeAppearance = appearance
+        naviationBarAppearance.prefersLargeTitles = true
     }
     
     
