@@ -9,7 +9,6 @@ import Foundation
 
 struct ArticleList: Codable {
     let articles: [Article]
-    
 }
 
 struct Article: Codable {

@@ -21,13 +21,12 @@ class WebService {
         guard let response = response as? HTTPURLResponse, (200..<299) ~= response.statusCode else {
             throw WebServiceError.responseFailed
         }
-        let articleList = try? JSONDecoder().decode(ArticleList.self, from: data)
-        guard let articles = articleList else {
-            throw WebServiceError.parseJSONFailed
-        }
-        return articles.articles
+        let articleList = try JSONDecoder().decode(ArticleList.self, from: data)
+        
+        return articleList.articles
     }
 }
+
 
 //    func gerArticles(url: URL, completion: @escaping ([Article]?) -> Void) {
 //
@@ -49,9 +48,7 @@ class WebService {
 //                if let articelList = articelList {
 //                    completion(articelList.articles)
 //                }
-//                print(articelList?.articles)
 //            }
 //        }.resume()
 //    }
-
-
+//}
