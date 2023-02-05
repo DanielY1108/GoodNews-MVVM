@@ -12,6 +12,6 @@ struct ArticleList: Codable {
 }
 
 struct Article: Codable {
-    let title: String
-    let description: String
+    let title: String?
+    let description: String?
 }
