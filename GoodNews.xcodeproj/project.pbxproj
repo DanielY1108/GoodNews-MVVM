@@ -15,6 +15,7 @@
 		65D2B2BB298EC31700229EC3 /* NewsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B2BA298EC31700229EC3 /* NewsListTableViewController.swift */; };
 		65D2B2C3298FC9E100229EC3 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B2C2298FC9E100229EC3 /* WebService.swift */; };
 		65D2B2C8298FCF3300229EC3 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B2C7298FCF3300229EC3 /* Article.swift */; };
+		65D2B2CB298FDCE300229EC3 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B2CA298FDCE300229EC3 /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		65D2B2BA298EC31700229EC3 /* NewsListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsListTableViewController.swift; path = ../../../../../NewsListTableViewController.swift; sourceTree = "<group>"; };
 		65D2B2C2298FC9E100229EC3 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		65D2B2C7298FCF3300229EC3 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		65D2B2CA298FDCE300229EC3 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,9 @@
 			children = (
 				65D2B2A3298E993500229EC3 /* AppDelegate.swift */,
 				65D2B2A5298E993500229EC3 /* SceneDelegate.swift */,
-				65D2B2C5298FCDAA00229EC3 /* Models */,
 				65D2B2C1298FC9C800229EC3 /* Services */,
+				65D2B2C5298FCDAA00229EC3 /* Models */,
+				65D2B2C9298FDCA200229EC3 /* View Models */,
 				65D2B2B7298E994700229EC3 /* Controller */,
 				65D2B2A9298E993500229EC3 /* Main.storyboard */,
 				65D2B2AC298E993600229EC3 /* Assets.xcassets */,
@@ -95,6 +98,14 @@
 				65D2B2C7298FCF3300229EC3 /* Article.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		65D2B2C9298FDCA200229EC3 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				65D2B2CA298FDCE300229EC3 /* ArticleViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				65D2B2BB298EC31700229EC3 /* NewsListTableViewController.swift in Sources */,
 				65D2B2A4298E993500229EC3 /* AppDelegate.swift in Sources */,
 				65D2B2C3298FC9E100229EC3 /* WebService.swift in Sources */,
+				65D2B2CB298FDCE300229EC3 /* ArticleViewModel.swift in Sources */,
 				65D2B2A6298E993500229EC3 /* SceneDelegate.swift in Sources */,
 				65D2B2C8298FCF3300229EC3 /* Article.swift in Sources */,
 			);
